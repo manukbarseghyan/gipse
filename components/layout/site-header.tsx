@@ -42,7 +42,7 @@ export function SiteHeader() {
       </a>
       <div className="container-page flex h-16 items-center justify-between gap-4 sm:h-20">
         <Link href={`/${locale}`} aria-label="GIPSE" className="shrink-0">
-          <Wordmark />
+          <Wordmark compact className="h-12 sm:h-16" />
         </Link>
 
         <nav aria-label={t("nav.mainNav")} className="hidden md:block">

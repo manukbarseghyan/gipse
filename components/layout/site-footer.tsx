@@ -15,7 +15,7 @@ export async function SiteFooter({ locale, t, year }: { locale: Locale; t: Store
     <footer className="mt-24 border-t border-sand bg-cream/60">
       <div className="container-page grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div className="lg:col-span-2">
-          <Wordmark />
+          <Wordmark className="h-20" />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">{t("footer.tagline")}</p>
           <p className="mt-3 text-sm text-muted">{t("footer.deliveryNote")}</p>
         </div>

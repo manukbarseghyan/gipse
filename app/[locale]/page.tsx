@@ -185,7 +185,7 @@ function Hero({ locale, t, images }: { locale: Locale; t: StoreTranslator; image
               {images.length < 3
                 ? Array.from({ length: 3 - images.length }, (_, i) => (
                     <div key={i} className="col-span-2 row-span-3 flex items-center justify-center rounded-[var(--radius-card)] bg-white/70">
-                      <LogoMark className="h-12 w-12 opacity-70" />
+                      <LogoMark className="h-16 opacity-70" />
                     </div>
                   ))
                 : null}
@@ -193,9 +193,8 @@ function Hero({ locale, t, images }: { locale: Locale; t: StoreTranslator; image
           ) : (
             <div className="flex aspect-[5/5.4] items-center justify-center rounded-[2rem] border border-white/80 bg-white/50 shadow-[var(--shadow-soft)]">
               <div className="text-center">
-                <LogoMark className="mx-auto h-24 w-24" />
-                <p className="mt-6 font-display text-4xl tracking-[0.3em] text-ink">GIPSE</p>
-                <p className="mt-2 text-sm text-muted">{t("home.heroEyebrow")}</p>
+                <LogoMark className="mx-auto h-auto w-[85%]" />
+                <p className="mt-4 text-sm text-muted">{t("home.heroEyebrow")}</p>
               </div>
             </div>
           )}

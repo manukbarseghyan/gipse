@@ -20,7 +20,7 @@ export function ProductImage({ path, alt, sizes, priority, className, placeholde
   if (!src) {
     return (
       <div className={cn("plaster flex h-full w-full flex-col items-center justify-center gap-2 text-taupe", className)}>
-        <LogoMark className="h-12 w-12 opacity-80" />
+        <LogoMark className="h-14 opacity-80" />
         {placeholderLabel ? <span className="text-xs tracking-wide">{placeholderLabel}</span> : <span className="sr-only">{alt}</span>}
       </div>
     );

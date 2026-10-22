@@ -66,7 +66,7 @@ app/
   admin/(panel)/         protected admin pages (dashboard, orders, products, categories, settings)
   api/payments/arca/     payment return + signed callback
   api/cron/              Telegram retry job (Vercel Cron)
-  sitemap.ts, robots.ts, icon.svg
+  sitemap.ts, robots.ts, icon.png, apple-icon.png
 components/              UI (storefront, cart, checkout, admin, primitives)
 lib/
   actions/               server actions (storefront, payment, admin) — the only mutation entry points

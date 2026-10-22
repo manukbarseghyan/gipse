@@ -17,7 +17,7 @@ export default async function AdminLoginPage({ searchParams }: PageProps<"/admin
     <div className="flex min-h-dvh items-center justify-center px-4 py-12">
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
-          <Wordmark className="justify-center" />
+          <Wordmark className="mx-auto h-28" />
           <h1 className="mt-6 text-2xl text-ink">{t("login.title")}</h1>
         </div>
         <div className="rounded-[var(--radius-card)] bg-white p-6 shadow-[var(--shadow-soft)] sm:p-8">

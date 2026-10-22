@@ -1,29 +1,49 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
+// The logo artwork (figurines + «Գիպսե» lettering) lives in public/logo.svg.
+// Its viewBox is 992×568, so size it by height and let the width follow.
+const LOGO_WIDTH = 992;
+const LOGO_HEIGHT = 568;
+
 /**
- * GIPSE wordmark: wide-tracked serif capitals with a small plaster "drop"
- * mark. Pure SVG + text, so it stays crisp and needs no image asset.
+ * Full GIPSE logo; doubles as the brand name for screen readers.
+ * `compact` uses public/logo-header.webp (448px wide, ~59 KB instead of the
+ * 588 KB SVG) for small, always-visible spots like the header. Its intrinsic
+ * size matches the largest header height (64px) so next/image only builds
+ * 1x/2x variants of that size.
  */
-export function Wordmark({ className, withMark = true }: { className?: string; withMark?: boolean }) {
-  return (
-    <span className={cn("inline-flex items-center gap-2.5 text-ink", className)}>
-      {withMark ? <LogoMark className="h-7 w-7" /> : null}
-      <span className="font-display text-[1.6rem] leading-none font-medium tracking-[0.28em]">GIPSE</span>
-    </span>
+export function Wordmark({ className, compact = false }: { className?: string; compact?: boolean }) {
+  return compact ? (
+    <Image
+      src="/logo-header.webp"
+      alt="GIPSE"
+      width={112}
+      height={64}
+      loading="eager"
+      className={cn("h-12 w-auto", className)}
+    />
+  ) : (
+    <Image
+      src="/logo.svg"
+      alt="GIPSE"
+      width={LOGO_WIDTH}
+      height={LOGO_HEIGHT}
+      className={cn("h-12 w-auto", className)}
+    />
   );
 }
 
+/** Decorative logo used in placeholders; hidden from assistive tech. */
 export function LogoMark({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 32 32" className={className} aria-hidden focusable="false">
-      <circle cx="16" cy="16" r="15" fill="var(--color-accent-soft)" />
-      <path
-        d="M16 6.5c3.6 4.2 6.5 8 6.5 11.6a6.5 6.5 0 0 1-13 0c0-3.6 2.9-7.4 6.5-11.6Z"
-        fill="var(--color-ivory)"
-        stroke="var(--color-accent)"
-        strokeWidth="1.4"
-      />
-      <path d="M13.2 19.2a3 3 0 0 0 2.8 2.3" fill="none" stroke="var(--color-accent)" strokeWidth="1.2" strokeLinecap="round" />
-    </svg>
+    <Image
+      src="/logo.svg"
+      alt=""
+      aria-hidden
+      width={LOGO_WIDTH}
+      height={LOGO_HEIGHT}
+      className={cn("h-12 w-auto", className)}
+    />
   );
 }

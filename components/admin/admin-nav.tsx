@@ -84,7 +84,7 @@ export function AdminNav({ email }: { email: string | undefined }) {
     <>
       <div className="sticky top-0 z-30 flex h-14 items-center justify-between border-b border-sand bg-ivory px-4 lg:hidden">
         <Link href="/admin">
-          <Wordmark className="scale-90" />
+          <Wordmark className="h-10" />
         </Link>
         <button
           type="button"
@@ -105,7 +105,7 @@ export function AdminNav({ email }: { email: string | undefined }) {
 
       <aside className="sticky top-0 hidden h-dvh w-64 shrink-0 flex-col border-r border-sand bg-ivory p-5 lg:flex">
         <Link href="/admin" className="mb-8 px-2">
-          <Wordmark />
+          <Wordmark className="h-16" />
         </Link>
         {nav}
       </aside>
