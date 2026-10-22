@@ -47,7 +47,7 @@ export default async function AdminProductsPage({ searchParams }: PageProps<"/ad
             name="q"
             defaultValue={filters.q}
             placeholder={t("products.searchPlaceholder")}
-            className="h-11 w-full rounded-full border border-stone bg-white pr-4 pl-10 text-sm focus:border-clay focus:ring-2 focus:ring-clay/20 focus:outline-none"
+            className="h-11 w-full rounded-full border border-stone bg-white pr-4 pl-10 text-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none"
           />
         </div>
         <label htmlFor="product-category" className="sr-only">{t("products.category")}</label>
@@ -82,7 +82,7 @@ export default async function AdminProductsPage({ searchParams }: PageProps<"/ad
                   <ProductImage path={product.cover} alt="" sizes="64px" />
                 </Link>
                 <div className="min-w-0 flex-1">
-                  <Link href={`/admin/products/${product.id}`} className="font-medium text-ink hover:text-clay-dark">
+                  <Link href={`/admin/products/${product.id}`} className="font-medium text-ink hover:text-accent-dark">
                     {name}
                   </Link>
                   <div className="mt-1 flex flex-wrap items-center gap-1.5 text-xs text-muted">

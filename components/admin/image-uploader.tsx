@@ -130,7 +130,7 @@ export function ImageUploader({ value, onChange, onUploaded }: Props) {
           <li>
             <label
               htmlFor={inputId}
-              className="flex aspect-square cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-stone bg-white text-sm text-muted transition-colors hover:border-clay hover:text-clay-dark has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-clay/30"
+              className="flex aspect-square cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-stone bg-white text-sm text-muted transition-colors hover:border-accent hover:text-accent-dark has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-accent/30"
             >
               <ImagePlus className="h-6 w-6" aria-hidden />
               {t("productForm.upload")}

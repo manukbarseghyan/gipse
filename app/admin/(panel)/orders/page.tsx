@@ -34,7 +34,7 @@ export default async function AdminOrdersPage({ searchParams }: PageProps<"/admi
             name="q"
             defaultValue={filters.q}
             placeholder={t("orders.searchPlaceholder")}
-            className="h-11 w-full rounded-full border border-stone bg-white pr-4 pl-10 text-sm focus:border-clay focus:ring-2 focus:ring-clay/20 focus:outline-none"
+            className="h-11 w-full rounded-full border border-stone bg-white pr-4 pl-10 text-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none"
           />
         </div>
         <button type="submit" className={buttonClasses("primary", "md")}>

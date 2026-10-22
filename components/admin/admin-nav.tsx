@@ -61,7 +61,7 @@ export function AdminNav({ email }: { email: string | undefined }) {
               aria-pressed={code === locale}
               className={cn(
                 "rounded-full px-3 py-1.5 text-xs font-semibold",
-                code === locale ? "bg-clay-soft text-clay-dark" : "text-taupe hover:text-ink",
+                code === locale ? "bg-accent-soft text-accent-dark" : "text-taupe hover:text-ink",
               )}
             >
               {localeShortNames[code]}

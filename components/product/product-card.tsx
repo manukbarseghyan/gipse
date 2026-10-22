@@ -61,7 +61,7 @@ export function ProductCard({
 
       <div className="flex flex-1 flex-col p-4 sm:p-5">
         <h3 className="font-display text-xl leading-snug text-ink">
-          <Link href={href} className="hover:text-clay-dark">
+          <Link href={href} className="hover:text-accent-dark">
             {name}
           </Link>
         </h3>

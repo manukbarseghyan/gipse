@@ -40,7 +40,7 @@ export default async function AdminOrderPage({ params }: PageProps<"/admin/order
             <dl className="mt-4 grid gap-4 text-sm sm:grid-cols-2">
               <Item label={t("orders.customer")}>{order.customer_name}</Item>
               <Item label={t("orders.phone")}>
-                <a href={`tel:${order.customer_phone}`} className="inline-flex items-center gap-1.5 font-medium text-clay-dark hover:text-ink">
+                <a href={`tel:${order.customer_phone}`} className="inline-flex items-center gap-1.5 font-medium text-accent-dark hover:text-ink">
                   <Phone className="h-3.5 w-3.5" aria-hidden /> {order.customer_phone}
                 </a>
               </Item>
@@ -100,7 +100,7 @@ export default async function AdminOrderPage({ params }: PageProps<"/admin/order
             <ol className="mt-4 space-y-3 border-l border-sand pl-5 text-sm">
               {order.order_events.map((event) => (
                 <li key={event.id} className="relative">
-                  <span className="absolute top-1.5 -left-[1.4rem] h-2 w-2 rounded-full bg-clay" aria-hidden />
+                  <span className="absolute top-1.5 -left-[1.4rem] h-2 w-2 rounded-full bg-accent" aria-hidden />
                   <span className="text-ink">{describeEvent(event, t, statusLabel)}</span>
                   <span className="block text-xs text-muted">{formatDateTime(event.created_at, locale)}</span>
                 </li>

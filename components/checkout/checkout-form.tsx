@@ -202,7 +202,7 @@ export function CheckoutForm() {
             {t("checkout.deliverySection")}
           </h2>
           <div className="mb-5 flex gap-3 rounded-2xl bg-cream/70 p-4 text-sm">
-            <Truck className="mt-0.5 h-5 w-5 shrink-0 text-clay" aria-hidden />
+            <Truck className="mt-0.5 h-5 w-5 shrink-0 text-accent" aria-hidden />
             <div>
               <p className="font-medium text-ink">{t("checkout.deliveryMethod")}</p>
               <p className="mt-0.5 text-muted">{t("checkout.deliveryMethodText")}</p>
@@ -298,7 +298,7 @@ export function CheckoutForm() {
         <button
           type="submit"
           disabled={isPending || completed || status === "checking"}
-          className="mt-6 inline-flex h-13 w-full items-center justify-center gap-2 rounded-full bg-ink px-8 text-base font-medium text-ivory transition-colors hover:bg-clay-dark disabled:opacity-60"
+          className="mt-6 inline-flex h-13 w-full items-center justify-center gap-2 rounded-full bg-ink px-8 text-base font-medium text-ivory transition-colors hover:bg-accent-dark disabled:opacity-60"
         >
           {isPending || completed ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden /> : <Lock className="h-4 w-4" aria-hidden />}
           {isPending || completed ? t("checkout.placing") : t("checkout.placeOrder")}
@@ -334,13 +334,13 @@ function PaymentOption({
   return (
     <label
       className={cn(
-        "flex cursor-pointer gap-4 rounded-2xl border-2 p-4 transition-colors has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-clay/30",
+        "flex cursor-pointer gap-4 rounded-2xl border-2 p-4 transition-colors has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-accent/30",
         checked ? "border-ink bg-cream/40" : "border-sand hover:border-stone",
         disabled && "cursor-not-allowed opacity-60 hover:border-sand",
       )}
     >
       <input type="radio" value={value} disabled={disabled} className="mt-1 h-4 w-4 accent-ink" {...registration} />
-      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-clay-soft text-clay-dark">{icon}</span>
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent-soft text-accent-dark">{icon}</span>
       <span>
         <span className="block font-medium text-ink">{title}</span>
         <span className="mt-0.5 block text-sm text-muted">{text}</span>

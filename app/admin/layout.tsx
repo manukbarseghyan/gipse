@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false, nocache: true },
 };
 
-export const viewport: Viewport = { themeColor: "#fbf8f3", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = { themeColor: "#fafafa", width: "device-width", initialScale: 1 };
 
 export default async function AdminRootLayout({ children }: LayoutProps<"/admin">) {
   const locale = await getAdminLocale();

@@ -57,7 +57,7 @@ export default async function AdminDashboardPage() {
         <Card className="overflow-hidden p-0 sm:p-0">
           <div className="flex items-center justify-between px-5 pt-5 sm:px-6">
             <h2 className="text-xl text-ink">{t("dashboard.recentOrders")}</h2>
-            <Link href="/admin/orders" className="text-sm font-medium text-clay-dark hover:text-ink">
+            <Link href="/admin/orders" className="text-sm font-medium text-accent-dark hover:text-ink">
               {t("dashboard.viewAllOrders")}
             </Link>
           </div>
@@ -98,7 +98,7 @@ export default async function AdminDashboardPage() {
 function SetupItem({ ok, text }: { ok: boolean; text: string }) {
   return (
     <li className="flex gap-2.5">
-      {ok ? <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-sage" aria-hidden /> : <CircleDashed className="mt-0.5 h-4 w-4 shrink-0 text-clay" aria-hidden />}
+      {ok ? <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-sage" aria-hidden /> : <CircleDashed className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden />}
       <span className={ok ? "text-ink" : "text-muted"}>{text}</span>
     </li>
   );

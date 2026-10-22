@@ -89,7 +89,7 @@ async function CatalogResults({
             defaultValue={filters.q}
             placeholder={t("catalog.searchPlaceholder")}
             maxLength={60}
-            className="h-12 w-full rounded-full border border-stone bg-white pr-4 pl-11 text-base placeholder:text-taupe focus:border-clay focus:ring-2 focus:ring-clay/20 focus:outline-none"
+            className="h-12 w-full rounded-full border border-stone bg-white pr-4 pl-11 text-base placeholder:text-taupe focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none"
           />
         </div>
         <div className="relative">
@@ -101,7 +101,7 @@ async function CatalogResults({
             id="catalog-sort"
             name="sort"
             defaultValue={filters.sort}
-            className="h-12 w-full appearance-none rounded-full border border-stone bg-white pr-8 pl-11 text-sm focus:border-clay focus:ring-2 focus:ring-clay/20 focus:outline-none sm:w-auto"
+            className="h-12 w-full appearance-none rounded-full border border-stone bg-white pr-8 pl-11 text-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none sm:w-auto"
           >
             <option value="newest">{t("catalog.sortNewest")}</option>
             <option value="price_asc">{t("catalog.sortPriceAsc")}</option>
@@ -135,7 +135,7 @@ async function CatalogResults({
       <div className="mb-5 flex items-center justify-between gap-4 text-sm text-muted" aria-live="polite">
         <p>{t.plural("catalog.results", result.total)}</p>
         {hasFilters ? (
-          <Link href={base} className="font-medium text-clay-dark hover:text-ink">
+          <Link href={base} className="font-medium text-accent-dark hover:text-ink">
             {t("catalog.clearFilters")}
           </Link>
         ) : null}

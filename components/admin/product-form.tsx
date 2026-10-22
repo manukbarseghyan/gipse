@@ -300,7 +300,7 @@ function Toggle({ id, checked, onChange, label, hint }: { id: string; checked: b
     <label htmlFor={id} className="flex cursor-pointer items-start gap-3">
       <span className="relative mt-0.5 inline-flex shrink-0">
         <input id={id} type="checkbox" role="switch" checked={checked} onChange={(e) => onChange(e.target.checked)} className="peer sr-only" />
-        <span className="h-6 w-11 rounded-full bg-stone transition-colors peer-checked:bg-sage peer-focus-visible:ring-2 peer-focus-visible:ring-clay/40" />
+        <span className="h-6 w-11 rounded-full bg-stone transition-colors peer-checked:bg-sage peer-focus-visible:ring-2 peer-focus-visible:ring-accent/40" />
         <span className="absolute top-0.5 left-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform peer-checked:translate-x-5" />
       </span>
       <span>

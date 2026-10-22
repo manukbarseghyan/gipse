@@ -67,7 +67,7 @@ export function AvailabilityToggle({ productId, isAvailable }: { productId: stri
           router.refresh();
         })
       }
-      className="text-xs font-medium text-clay-dark underline-offset-4 hover:underline disabled:opacity-50"
+      className="text-xs font-medium text-accent-dark underline-offset-4 hover:underline disabled:opacity-50"
     >
       {pending ? t("common.saving") : isAvailable ? t("products.makeUnavailable") : t("products.makeAvailable")}
     </button>

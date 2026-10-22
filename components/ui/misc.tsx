@@ -8,7 +8,7 @@ const badgeTones: Record<Tone, string> = {
   neutral: "bg-cream text-muted",
   success: "bg-sage-soft text-sage",
   danger: "bg-rose-soft text-rose",
-  accent: "bg-clay-soft text-clay-dark",
+  accent: "bg-accent-soft text-accent-dark",
   warning: "bg-amber-50 text-amber-800",
 };
 

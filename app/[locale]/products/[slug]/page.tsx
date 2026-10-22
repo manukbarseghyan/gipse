@@ -108,7 +108,7 @@ async function ProductContent({ params }: { params: Promise<{ locale: string; sl
               {description || t("product.noDescription")}
             </div>
             <p className="mt-6 flex gap-2 text-sm text-muted">
-              <Info className="mt-0.5 h-4 w-4 shrink-0 text-clay" aria-hidden />
+              <Info className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden />
               {t("product.handmadeNote")}
             </p>
           </section>

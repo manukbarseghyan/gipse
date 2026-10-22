@@ -41,7 +41,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           title={featured.length > 0 ? t("home.featuredTitle") : t("home.newArrivalsTitle")}
           subtitle={featured.length > 0 ? t("home.featuredSubtitle") : t("home.newArrivalsSubtitle")}
           action={
-            <Link href={`/${locale}/products`} className="inline-flex items-center gap-1.5 text-sm font-medium text-clay-dark hover:text-ink">
+            <Link href={`/${locale}/products`} className="inline-flex items-center gap-1.5 text-sm font-medium text-accent-dark hover:text-ink">
               {t("home.viewAll")} <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
           }
@@ -68,7 +68,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
                 <li key={category.id}>
                   <Link
                     href={`/${locale}/products?category=${encodeURIComponent(category.slug)}`}
-                    className="inline-flex items-center gap-2 rounded-full border border-stone bg-white px-5 py-3 text-sm text-ink shadow-[var(--shadow-soft)] transition-colors hover:border-clay hover:text-clay-dark"
+                    className="inline-flex items-center gap-2 rounded-full border border-stone bg-white px-5 py-3 text-sm text-ink shadow-[var(--shadow-soft)] transition-colors hover:border-accent hover:text-accent-dark"
                   >
                     {localized(category, "name", locale)}
                     <ArrowRight className="h-3.5 w-3.5" aria-hidden />
@@ -98,7 +98,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           {settings.instagram_url ? (
             <div className="flex flex-col justify-between rounded-[var(--radius-card)] bg-ink p-8 text-ivory sm:p-10 lg:col-span-2">
               <div>
-                <Instagram className="h-7 w-7 text-clay-soft" aria-hidden />
+                <Instagram className="h-7 w-7 text-accent-soft" aria-hidden />
                 <h2 className="mt-5 text-3xl">{t("home.instagramTitle")}</h2>
                 <p className="mt-3 text-sm leading-relaxed text-ivory/75">{t("home.instagramText")}</p>
               </div>
@@ -106,7 +106,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
                 href={settings.instagram_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-8 inline-flex h-11 w-fit items-center gap-2 rounded-full bg-ivory px-6 text-sm font-medium text-ink transition-colors hover:bg-clay-soft"
+                className="mt-8 inline-flex h-11 w-fit items-center gap-2 rounded-full bg-ivory px-6 text-sm font-medium text-ink transition-colors hover:bg-accent-soft"
               >
                 {t("home.instagramCta")} <ArrowRight className="h-4 w-4" aria-hidden />
               </a>
@@ -130,17 +130,17 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
               <InfoItem icon={<Phone className="h-5 w-5" aria-hidden />} title={t("home.contactTitle")}>
                 <span className="block">{t("home.contactText")}</span>
                 {settings.contact_phone ? (
-                  <a className="mt-1 block font-medium text-ink hover:text-clay-dark" href={`tel:${settings.contact_phone.replace(/[^\d+]/g, "")}`}>
+                  <a className="mt-1 block font-medium text-ink hover:text-accent-dark" href={`tel:${settings.contact_phone.replace(/[^\d+]/g, "")}`}>
                     {settings.contact_phone}
                   </a>
                 ) : null}
                 {settings.contact_email ? (
-                  <a className="mt-1 flex items-center gap-1.5 break-all text-ink hover:text-clay-dark" href={`mailto:${settings.contact_email}`}>
+                  <a className="mt-1 flex items-center gap-1.5 break-all text-ink hover:text-accent-dark" href={`mailto:${settings.contact_email}`}>
                     <Mail className="h-4 w-4 shrink-0" aria-hidden /> {settings.contact_email}
                   </a>
                 ) : null}
                 {settings.instagram_url ? (
-                  <a className="mt-1 flex items-center gap-1.5 text-ink hover:text-clay-dark" href={settings.instagram_url} target="_blank" rel="noopener noreferrer">
+                  <a className="mt-1 flex items-center gap-1.5 text-ink hover:text-accent-dark" href={settings.instagram_url} target="_blank" rel="noopener noreferrer">
                     <Instagram className="h-4 w-4" aria-hidden /> @gipse___
                   </a>
                 ) : null}
@@ -225,7 +225,7 @@ function Story({ t }: { t: StoreTranslator }) {
         <ul className="grid content-center gap-4">
           {points.map(({ icon: Icon, title, text }) => (
             <li key={title} className="flex gap-4 rounded-2xl bg-cream/70 p-5">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-clay">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-accent">
                 <Icon className="h-5 w-5" aria-hidden />
               </span>
               <span>
@@ -243,7 +243,7 @@ function Story({ t }: { t: StoreTranslator }) {
 function InfoItem({ icon, title, children }: { icon: React.ReactNode; title: string; children: React.ReactNode }) {
   return (
     <div className="flex gap-4">
-      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-clay-soft text-clay-dark">{icon}</span>
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent-soft text-accent-dark">{icon}</span>
       <div className="min-w-0">
         <dt className="font-medium text-ink">{title}</dt>
         <dd className="mt-1 text-sm leading-relaxed text-muted">{children}</dd>

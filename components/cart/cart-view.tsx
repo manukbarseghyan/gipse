@@ -69,7 +69,7 @@ export function CartView() {
         </ul>
 
         <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
-          <Link href={`/${locale}/products`} className="text-sm font-medium text-clay-dark hover:text-ink">
+          <Link href={`/${locale}/products`} className="text-sm font-medium text-accent-dark hover:text-ink">
             ← {t("cart.continueShopping")}
           </Link>
           {confirmClear ? (
@@ -120,7 +120,7 @@ function CartLine({ line, changes }: { line: CartItem; changes: CartChange[] }) 
       <div className="flex min-w-0 flex-1 flex-col gap-2">
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0">
-            <Link href={href} className="font-display text-lg leading-snug text-ink hover:text-clay-dark">
+            <Link href={href} className="font-display text-lg leading-snug text-ink hover:text-accent-dark">
               {name}
             </Link>
             <p className="mt-0.5 text-sm text-muted tabular-nums">{formatAmd(line.priceAmd)}</p>
@@ -148,9 +148,9 @@ function CartLine({ line, changes }: { line: CartItem; changes: CartChange[] }) 
             <p className="font-semibold text-ink tabular-nums">{formatAmd(line.priceAmd * line.quantity)}</p>
           </div>
         )}
-        {priceChange ? <p className="text-xs text-clay-dark">{t("cart.priceChanged")}</p> : null}
+        {priceChange ? <p className="text-xs text-accent-dark">{t("cart.priceChanged")}</p> : null}
         {quantityChange && quantityChange.kind === "quantity" ? (
-          <p className="text-xs text-clay-dark">{t("cart.quantityReduced", { count: quantityChange.to })}</p>
+          <p className="text-xs text-accent-dark">{t("cart.quantityReduced", { count: quantityChange.to })}</p>
         ) : null}
       </div>
     </li>

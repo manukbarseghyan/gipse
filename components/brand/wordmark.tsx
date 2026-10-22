@@ -16,14 +16,14 @@ export function Wordmark({ className, withMark = true }: { className?: string; w
 export function LogoMark({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 32 32" className={className} aria-hidden focusable="false">
-      <circle cx="16" cy="16" r="15" fill="var(--color-clay-soft)" />
+      <circle cx="16" cy="16" r="15" fill="var(--color-accent-soft)" />
       <path
         d="M16 6.5c3.6 4.2 6.5 8 6.5 11.6a6.5 6.5 0 0 1-13 0c0-3.6 2.9-7.4 6.5-11.6Z"
         fill="var(--color-ivory)"
-        stroke="var(--color-clay)"
+        stroke="var(--color-accent)"
         strokeWidth="1.4"
       />
-      <path d="M13.2 19.2a3 3 0 0 0 2.8 2.3" fill="none" stroke="var(--color-clay)" strokeWidth="1.2" strokeLinecap="round" />
+      <path d="M13.2 19.2a3 3 0 0 0 2.8 2.3" fill="none" stroke="var(--color-accent)" strokeWidth="1.2" strokeLinecap="round" />
     </svg>
   );
 }
